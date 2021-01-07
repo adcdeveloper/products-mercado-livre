@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".presentation.products.detail.view.fragment.ProductDetailFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/padding_16dp">
+
+            <ImageView
+                android:id="@+id/imageProductDetailHighlight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin_8dp"
+                android:layout_marginEnd="@dimen/margin_8dp"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/ic_logo_splash" />
+
+            <ProgressBar
+                android:id="@+id/progressProductDetailHighlight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:layout_constraintBottom_toBottomOf="@id/imageProductDetailHighlight"
+                app:layout_constraintEnd_toEndOf="@id/imageProductDetailHighlight"
+                app:layout_constraintStart_toStartOf="@id/imageProductDetailHighlight"
+                app:layout_constraintTop_toTopOf="@id/imageProductDetailHighlight" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerProductDetailImages"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:orientation="horizontal"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                app:layout_constraintTop_toBottomOf="@id/imageProductDetailHighlight"
+                tools:itemCount="5"
+                tools:listitem="@layout/item_view_holder_product_detail_image" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textProductDetailTitle"
+                style="@style/Text.Large"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_16dp"
+                app:layout_constraintTop_toBottomOf="@id/recyclerProductDetailImages"
+                tools:text="@tools:sample/lorem" />
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:id="@+id/textProductDetailSubtitle"
+                style="@style/Text.Medium"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/margin_8dp"
+                android:ellipsize="end"
+                android:maxLines="3"
+                app:layout_constraintTop_toBottomOf="@id/textProductDetailTitle"
+                tools:text="@tools:sample/lorem/random" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressProductDetailLoading"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

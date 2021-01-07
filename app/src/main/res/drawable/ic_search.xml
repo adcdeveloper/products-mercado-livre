@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="@dimen/size_icon_toolbar_24dp"
+    android:height="@dimen/size_icon_toolbar_24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <path
+        android:fillColor="?attr/colorAccent"
+        android:pathData="M15.5 2a6.5 6.5 0 1 1-4.232 11.435l-1.977 1.977-0.035 0.03 a2 2 0 0 1-0.306 2.436l-3.535 3.536a2 2 0 1 1-2.829-2.829l3.536-3.535a2 2 0 0 1 2.432-0.308l0.03-0.037 1.977-1.978A6.5 6.5 0 0 1 15.5 2zM6.83 15.757l-3.536 3.535a1 1 0 0 0 1.414 1.415l3.535-3.536a1 1 0 1 0-1.414-1.414zM15.5 3a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11z" />
+</vector>

@@ -1,0 +1,54 @@
+<resources>
+
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="toolbarStyle">@style/Toolbar</item>
+        <item name="android:toolbarStyle">@style/Toolbar</item>
+        <item name="searchViewStyle">@style/SearchView</item>
+        <item name="android:searchViewStyle">@style/SearchView</item>
+        <item name="colorControlNormal">@color/colorAccent</item>
+    </style>
+
+    <style name="AppTheme.FullScreen">
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:theme">@style/ThemeOverlay.MaterialComponents.Toolbar.Primary</item>
+        <item name="theme">@style/ThemeOverlay.MaterialComponents.Toolbar.Primary</item>
+        <item name="titleTextColor">@color/colorAccent</item>
+    </style>
+
+    <style name="SearchView" parent="Widget.AppCompat.Light.SearchView">
+        <item name="iconifiedByDefault">false</item>
+        <item name="queryHint">@string/all_search_products</item>
+        <item name="searchIcon">@null</item>
+        <item name="queryBackground">@null</item>
+    </style>
+
+    <style name="Text" parent="Widget.MaterialComponents.TextView" />
+
+    <style name="Text.Large">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/grey_70</item>
+    </style>
+
+    <style name="Text.Medium">
+        <item name="android:textSize">@dimen/text_size_medium</item>
+        <item name="android:textColor">@color/grey_80</item>
+    </style>
+
+    <style name="Text.Small">
+        <item name="android:textSize">@dimen/text_size_small</item>
+        <item name="android:textColor">@color/grey_50</item>
+    </style>
+
+    <style name="Text.Large.Number">
+        <item name="android:textSize">@dimen/text_size_large</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+</resources>

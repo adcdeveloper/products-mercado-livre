@@ -1,0 +1,60 @@
+apply plugin: 'jacoco'
+
+tasks.withType(Test) {
+    jacoco.includeNoLocationClasses = true
+    jacoco.excludes = ['jdk.internal.*']
+}
+
+tasks.withType(Test) { jacoco.includeNoLocationClasses = true }
+
+task jacocoReport(type: JacocoReport, dependsOn: "testDebugUnitTest") {
+    group = "Reporting"
+    description = "Generate Jacoco coverage reports"
+
+    reports {
+        html.enabled = true
+        xml.enabled = true
+    }
+
+    def fileFilter = [
+            '**/R.class',
+            '**/R$*.class',
+            '**/BuildConfig.*',
+            '**/Manifest*.*',
+            '**/*Test*.*',
+            '**/*MapperImpl*.*',
+            '**/*$ViewInjector*.*',
+            '**/*$ViewBinder*.*',
+            '**/BuildConfig.*',
+            '**/*Component*.*',
+            '**/*BR*.*',
+            '**/Manifest*.*',
+            '**/*$Lambda$*.*',
+            '**/*Companion*.*',
+            '**/*Module.*',
+            '**/*Dagger*.*',
+            '**/*MembersInjector*.*',
+            '**/*_Factory*.*',
+            '**/*_Provide*Factory*.*',
+            '**/*Activity*.*',
+            '**/*Fragment*.*',
+            '**/*Adapter*.*',
+            '**/*Application*.*',
+            '**/*$Result*.*', /* filtering `sealed` and `data` classes */
+            '**/*$Result$*.*'/* filtering `sealed` and `data` classes */
+    ]
+
+    classDirectories.setFrom(files([
+            fileTree(dir: "${buildDir}/tmp/kotlin-classes/debug", excludes: fileFilter),
+    ]))
+
+    def coverageSourceDirs = ["$project.rootDir/app/src/main/kotlin"]
+    additionalSourceDirs.setFrom(files(coverageSourceDirs))
+    sourceDirectories.setFrom(files(coverageSourceDirs))
+
+    executionData(files(["$project.buildDir/jacoco/testDebugUnitTest.exec"]))
+
+    doLast {
+        println "Coverage report path -> file://${reports.html.destination}/index.html\n"
+    }
+}

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- CARD -->
+    <dimen name="card_elevation_2dp">2dp</dimen>
+    <dimen name="card_radius_4dp">4dp</dimen>
+
+    <!-- IMAGE -->
+    <dimen name="width_image_splash_96dp">96dp</dimen>
+    <dimen name="height_image_splash_68dp">68dp</dimen>
+
+    <dimen name="size_image_item_product_detail_56dp">56dp</dimen>
+
+    <dimen name="size_image_product_56dp">56dp</dimen>
+
+    <!-- TOOLBAR -->
+    <dimen name="size_icon_toolbar_24dp">24dp</dimen>
+
+    <!-- TEXT SIZE -->
+    <dimen name="text_size_large">16sp</dimen>
+    <dimen name="text_size_medium">14sp</dimen>
+    <dimen name="text_size_small">12sp</dimen>
+
+    <!-- MARGIN -->
+    <dimen name="margin_16dp">16dp</dimen>
+    <dimen name="margin_8dp">8dp</dimen>
+    <dimen name="margin_4dp">4dp</dimen>
+
+    <!-- PADDING -->
+    <dimen name="padding_16dp">16dp</dimen>
+    <dimen name="padding_8dp">8dp</dimen>
+    <dimen name="padding_4dp">4dp</dimen>
+
+    <!-- DIVIDER -->
+    <dimen name="height_divider_4dp">4dp</dimen>
+
+</resources>
