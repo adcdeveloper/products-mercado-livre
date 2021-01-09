@@ -12,7 +12,13 @@ Tendo como principais features:
 
 O código fonte foi escrito em kotlin, seguindo o *pattern* MVVM e prática do *Clean Architecture*.
 
-Foram testados
+### Teste unitário 
+
+Os testes foram escritos para as `Extensions`, classes do *Clean Architecture* e `ViewModel`, seguindo o padrão *AAA*.
+
+### Testes instrumentados
+
+Testes para validar o fluxo de pesquisa de produtos. 
 
 ### JaCoCo
 
